@@ -1,4 +1,4 @@
-import {NEWTODO, TOGGLEDONE} from '../actions'
+import {NEWTODO, TOGGLEDONE} from './actions'
 
 const initialState ={
         todo:[

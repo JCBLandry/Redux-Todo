@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { newtodo } from '../actions'
-import { toggledone } from '../actions'
+import { newtodo } from './actions'
+import { toggledone } from './actions'
 
 class TodoForm extends Component {
 
@@ -17,8 +17,7 @@ class TodoForm extends Component {
     handleDone = (e,todo) =>{
         e.preventDefault();
         this.props.toggledone(todo)
-
-    }
+        }
 
   render() {
     return (
@@ -26,9 +25,8 @@ class TodoForm extends Component {
         <div>
         {this.props.todo.map((todo, id)=>{
             return(
-                <h2  onClick ={()=>this.props.toggledone(todo)}key = {id}>{todo.newTodo} </h2>
-            )
-        })}
+                <h2 onClick ={()=>this.props.toggledone(todo)}key = {id}>{todo.newTodo}</h2>
+            )})}
         </div>
       <div>
         <form onSubmit ={(event)=> this.handleChanges(event)}>

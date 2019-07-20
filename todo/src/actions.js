@@ -1,8 +1,8 @@
 export const NEWTODO = 'NEWTODO';
-export const TOGGLECOMPLETE = 'TOGGLEDONE';
+export const TOGGLEDONE = 'TOGGLEDONE';
 export const DELETETODO = 'DELETETODO';
 
-export const addtodo = newTodo => {
+export const newtodo = newTodo => {
     return {
       type: NEWTODO,
       payload:{
